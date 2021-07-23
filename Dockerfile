@@ -10,7 +10,7 @@ FROM adoptopenjdk/openjdk11-openj9:ubi-minimal-jre as base
 RUN mkdir -p /opt/schematool/workarea
 
 # Copy in the relevant artifacts in a single command
-COPY ./run.sh ./t/fhir-persistence-schema-*-cli.jar ./target/LICENSE /opt/schematool/
+COPY ./run.sh ./t/fhir-persistence-schema-*-cli.jar ./t/LICENSE /opt/schematool/
 
 RUN curl -L -o /opt/schematool/jq https://github.com/stedolan/jq/releases/download/jq-1.6/jq-linux64 && \
     chmod +x /opt/schematool/jq
